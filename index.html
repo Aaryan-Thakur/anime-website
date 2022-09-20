@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Waltuh</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="prec onnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+    </script>
+
+  </head>
+
+  <body>
+    <div id="main-title">
+      <img id="logo" src="static/logo.png" width="60px">
+      <h1 id="page-title">MAL</h1>
+      <div id="link-container">
+        <a class= "nav-link" href="#">Home</a>
+        <a class= "nav-link" href="#">Explore</a>
+        <a class= "nav-link" href="#">About us</a>
+        <a class= "nav-link" href="#">Feedback</a>
+      </div>
+    </div>
+
+    <!-- use of section/Semantic elements -->
+    <section id="movies">
+    <h2 id="article-title">My Top 5 Anime Movies of All Time</h2>
+    <p id="title-description"> The best of the best in the industry</p>
+
+    <div id="author">
+      <img id="author-logo" src="static/walter.png">
+       <div id="author-name-container">
+        <div id="author-name">Walter White</div>
+        <div id="author-description">2 min read</div>
+      </div>
+    </div>
+
+<!-- START OF SLIDESHOW FEATURE -->
+    <div id="slideshow">
+
+     
+
+      <div id="movie-item">
+
+        <a onclick="previous()" id="slideshowButton">&#10094;</a>
+
+        <img id="movie-img" src="static/m1.jpg">
+
+        <a onclick="next()" id="slideshowButton">&#10095;</a>
+
+      </div>
+
+
+
+      <h3 id="movie-title">Spirited Away</h3>
+      <div id="trailer" > <a href="https://www.youtube.com/watch?v=ByXuk9QqQkk"><button class="button-2" role="button">Trailer</button></a></div>
+
+      <p id="movie-description">
+        This is like watching a dream. Sometimes when you have those moments where you picture something then you say to yourself that was not reality, 
+        the image that came to my mind must be from a different world that I saw somewhere, but not that I can recall when or where. This is like opening 
+        a door deep down in your mind and behind that door lies all your lucid dreams and imaginations. watch it for sure, you can never go wrong with this.
+        I enjoyed this very much. You will experience all kind of different feelings watching this; fear, love, warmth..etc
+      </p>
+
+
+    </div>
+<!-- END OF SLIDESHOW FEATURE -->
+
+<!-- THIS IS NOT DISPLAYED -->
+    <div class="movie-item" style=" display: none">
+      <img class="movie-img" src="static/m1.jpg">
+      <h3 class="movie-title">Spirited Away</h3>
+      <p class="movie-description">
+        This is like watching a dream. Sometimes when you have those moments where you picture something then you say to yourself that was not reality, 
+        the image that came to my mind must be from a different world that I saw somewhere, but not that I can recall when or where. 
+        This is like opening a door deep down in your mind and behind that door lies all your lucid dreams and imaginations. watch it for sure, 
+        you can never go wrong with this.
+
+        I enjoyed this very much. You will experience all kind of different feelings watching this; fear, love, warmth..etc
+      </p>
+      <div class="trailer" > <a href="https://www.youtube.com/watch?v=ByXuk9QqQkk"><button class="button-2" role="button">Trailer</button></a></div>
+    </div>
+
+    <div class="movie-item" style=" display: none">
+      <img class="movie-img" src="static/m2.jpg">
+      <h3 class="movie-title">A Silent Voice</h3>
+     <p class="movie-description">
+        Like any other slice-of-life anime, the plot is relatively simple, however there is an outstanding attention to the development of the characters.
+        As usual for Naoko Yamada, most of the scenes and dialogue from the manga are present, however she adds so much more to the anime, making it a truly emotional experience.
+        The story is very mature, not in the sense that it is dark and gritty, but more in the sense that the characters are fully realised, presented in a realistic manner.
+        A Silent Voice forgoes anime archetypes by maintaining internal-consistency in all of its characters, making all of their actions relatable, or at least understandable.
+        It is difficult to describe why the audio-visuals work so well using just words.
+        I found the film to be a powerful, transformative experience.
+      </p> 
+      <div class="trailer" > <a href="https://www.youtube.com/watch?v=nfK6UgLra7g"><button class="button-2" role="button">Trailer</button></a></div>
+    </div>
+
+    <div class="movie-item" style=" display: none" >
+      <img class="movie-img" src="static/m3.jpg">
+      <h3 class="movie-title">Your Name</h3>
+      <p class="movie-description">Your Name is honestly one of the best anime movies I have ever seen. The beginning of the film was a bit confusing for me and I nearly fell asleep when I was watching the film but there was a certain scene that woke up, that scene gave me happiness about the true meaning of love and this movie shows every single aspect of that. I really enjoyed watching this film, there was also a bit of funny scenes during the movie but the best part of this film was the music that was used during some scenes and man it got me into the feels train. I love the two protagonists of the film ( Mitsuha and Taki) because through these two it gave me hope about what love is all about, that even when time passes by, your feelings for the person you love will never go away, your incomplete without them. This is a must watch movie before you die, it's so sweet and overall it's a masterpiece that's gonna be in my top 5 for the best animes I've seen.
+      </p>
+      <div class="trailer" > <a href="https://www.youtube.com/watch?v=xU47nhruN-Q"><button class="button-2" role="button">Trailer</button></a></div>
+    </div>
+
+    <div class="movie-item" style=" display: none" >
+      <img class="movie-img" src="static/m4.jpg">
+      <h3 class="movie-title">Demon Slayer Mugen Train</h3>
+     <p class="movie-description">The story starts from where the anime left, the mugen train. As a part of the main story this movie fully illustrates its main theme which revolves 
+        around the train. As a sequel to the anime its great that the story shifts to new characters, also introducing new elements like dream, awesome techniques etc. 
+        Its also refreshing to see the Tanjiro, Zenitsu, Inosuke develop in strength and capabilities. The art was excellent, detailing every bits, all the scenes and lighting 
+        takes the audience into the movie, which is a great experience. Most of all, the emotions and encouragement it shares is absolutely mind blowing and gives strength to 
+        all the hearts of audience. It teaches us that we need to strive hard for our goals to be fulfilled, and to have a meaningful life which will lead to our success in the
+        afterlife.
+       </p>
+       <div class="trailer" > <a href="https://www.youtube.com/watch?v=bFwdl2PDAFM"><button class="button-2" role="button">Trailer</button></a></div>
+      
+    </div>
+
+    <div class="movie-item" style=" display: none" >
+      <img class="movie-img" src="static/m5.webp">
+      <h3 class="movie-title">Kimi no suizô o tabetai</h3>
+      <p class="movie-description" >"Kimi no Suizou wo Tabetai" was a movie that was able to emphasize the main protagonists to be unique dynamic characters that underwent change 
+        throughout the whole movie. The movie's plot was unique and was not generic at all. "Kimi no Suizou wo Tabetai" advised viewers about what it means to be "living"
+        through focusing on Sakura's unaltering fate of death. The anime's art and sound were able to perfectly intertwine to create an enjoyable experience for viewers.
+        Ultimately, I perfectly enjoyed the roller coaster of feels that "Kimi no Suizou wo Tabetai" gave me. The movie highlighted the unchangeable fate that all living 
+        individuals face which is death. [small spoiler alert] The main character Sakura is faced with chronic kidney disease and even though she is secretly terrified of
+        death, she puts out a brave front and continues to live her everyday life "normally."
+      </p>
+      <div class="trailer" > <a href="https://www.youtube.com/watch?v=MmoBvmJA9XI"><button class="button-2" role="button">Trailer</button></a></div>
+    </div>
+<!-- THIS IS NOT DISPLAYED -->
+
+
+    <!-- <ul>d
+
+      <li>
+        <div class="movieitem">
+
+
+          <img class="movie-img" src="static/m1.webp">
+          Spirited Away
+
+
+          <a id="trailer" href="https://www.youtube.com/watch?v=ByXuk9QqQkk">Trailer</a>
+        </div>
+      </li>
+
+      
+      <li>
+        
+      </li>
+      
+      <li>
+        
+      </li>
+      
+      <li>
+        
+      </li>
+
+      <li>
+        
+      </li>
+    </ul> -->
+   </section>
+
+
+
+   
+    <article id="container">
+      <div id="best-movie">
+      <h2 style="margin:0px">Best anime movie of 2022</h2>
+      <h3>One Piece Flim Red</h3>
+      <p>
+        One Piece Film: Red is a 2022 Japanese animated fantasy action-adventure film directed by Gorō Taniguchi and produced by Toei Animation.It is the fifteenth feature film of the One Piece film series, based on the manga of the same name written and illustrated by Eiichiro Oda.
+      </p>
+
+      <!-- use of video/audio -->
+      <video width="880" controls>
+      <source src="static/trailer.mp4" />
+      Your browser does not support HTML video.
+      </video>
+    </div>
+    </article>
+
+
+    <div class="form">
+      
+      <!-- <form>
+        <div class="title"> Feedback Form</div>
+          <label class="lable" for="fname">Name</label>
+          <input type="text" id = "fname"> <br> <br>
+
+          <label class="lable" for="mail">Email ID</label>
+          <input type="email" id = "mail"><br><br>
+
+          
+          <label class="lable" for="age">Age</label>
+          <input type="number" id = "age"><br><br>
+
+
+          <label class="lable" for="html">Gender</label>
+
+        <div class="inputgender">
+          <input type="radio" id="male" name="fav_language" value="male">
+          <label for="html">male</label><br>
+          <input type="radio" id="female" name="fav_language" value="female">
+          <label for="female">female</label><br>
+        <div>
+
+          <label for="cars">Rate one piece film red my dragging and dropping </label>
+          <section class="dnd">
+               <div class="rating">
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+              <img
+                src="static/m6.jpg"
+                draggable="true"
+                ondragstart="drag(event)"
+                id="drag1"
+                width="55"
+                height="31"
+              />
+            </div>
+            <div>A+</div>
+          </div>
+
+            <div>
+              <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+              <div>A</div>
+            </div>
+
+            <div>
+              <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+              <div>B</div>
+            </div>
+
+            <div>
+              <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+              <div>F</div>
+            </div>
+          </section><br>
+          <input type="submit" value="Submit">
+      </form> -->
+      </div> 
+
+
+
+  </body>
+  <script src="script.js"></script>
+</html>
