@@ -75,15 +75,19 @@ function previous(){
 }
 
 
-
 window.onscroll = function() {scrollFunction()};
-
 function scrollFunction() {
-  if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
-    document.getElementById("logo").style.display = "none";
+  if (window.pageYOffset > 1  ) {
+    document.getElementById("logo").style.marginBottom = "0px";
+    document.getElementById("logo").style.maxWidth = "40px";
+    document.getElementById("logo").style.filter = "invert(1)";
     document.getElementById("page-title").style.display = "none";
     document.getElementById("main-title").style.paddingLeft="0px";
-    document.getElementById("link-container").style.paddingLeft="0px";
+
+    document.getElementById("link-container").style.display="none";
+    document.getElementById("link-container-min").style.display="";
+    // document.getElementById("link-container-min").style.display ="inline-block";
+
     for(let i=0;i<4;i++){
         document.getElementsByClassName("nav-link")[i].style.padding = "10px";
         document.getElementsByClassName("nav-link")[i].style.color = "white";
@@ -91,17 +95,27 @@ function scrollFunction() {
     
 
   } else {
-    document.getElementById("logo").style.display = "";
-    document.getElementById("page-title").style.display = "";
+    document.getElementById("logo").style.display = "block";
+     document.getElementById("logo").style.maxWidth = "60px";
+     document.getElementById("logo").style.filter = "invert(0)";
+    document.getElementById("page-title").style.display = "block";
     document.getElementById("main-title").style.paddingLeft="30px";
+    
 
-    document.getElementById("link-container").style.paddingLeft="30px";
 
     for(let i=0;i<4;i++){
         document.getElementsByClassName("nav-link")[i].style.padding = "20px";
         document.getElementsByClassName("nav-link")[i].style.color = "black  ";
 
     }
+
+    document.getElementById("link-container").style.display="flex";
+    document.getElementById("link-container-min").style.display="none";
+    
+
+    // document.getElementById("link-container").style.display="inline";
+    // document.getElementById("link-container-min").style.display ="none";
+
 
   }
 }
