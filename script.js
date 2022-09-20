@@ -80,7 +80,6 @@ function scrollFunction() {
   if (window.pageYOffset > 1  ) {
     document.getElementById("logo").style.marginBottom = "0px";
     document.getElementById("logo").style.maxWidth = "40px";
-    document.getElementById("logo").style.filter = "invert(1)";
     document.getElementById("page-title").style.display = "none";
     document.getElementById("main-title").style.paddingLeft="0px";
 
@@ -97,7 +96,6 @@ function scrollFunction() {
   } else {
     document.getElementById("logo").style.display = "block";
      document.getElementById("logo").style.maxWidth = "60px";
-     document.getElementById("logo").style.filter = "invert(0)";
     document.getElementById("page-title").style.display = "block";
     document.getElementById("main-title").style.paddingLeft="30px";
     
@@ -105,7 +103,7 @@ function scrollFunction() {
 
     for(let i=0;i<4;i++){
         document.getElementsByClassName("nav-link")[i].style.padding = "20px";
-        document.getElementsByClassName("nav-link")[i].style.color = "black  ";
+        document.getElementsByClassName("nav-link")[i].style.color = "white  ";
 
     }
 
