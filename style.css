@@ -240,7 +240,7 @@ color: whitesmoke;
   flex-direction: column;
 
     
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("static/m1.gif") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("static/m4.gif") no-repeat center;
   background-size: cover;
   min-height: 100vh;
 
@@ -251,7 +251,7 @@ color: whitesmoke;
   width: 885px;
   border-radius: 50px;
   border-style: solid;
-  border-color: darkgoldenrod;
+  border-color: orangered;
   border-width: 3px;
   
 }
@@ -422,11 +422,18 @@ video{
   background-color: #dddddd;
 }
 
+#form-title{
+  text-align: center;
+  font-size: 25px;
+}
+
+
 .form-group{
   display: flex;
   justify-content: center;
   margin-right: 160px;
 }
+
 
 .input{
   width: 50vw;

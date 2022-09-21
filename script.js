@@ -3,7 +3,7 @@ const imgsrc = [];
 const desc = [];
 const title = [];
 const links =[];
-const giflinks =["static/m1.gif","static/m2.1.gif","static/m3.gif","static/m4.gif","static/m5.gif"];
+const giflinks =["static/m4.gif","static/m1.gif","static/m2.1.gif","static/m3.gif","static/m5.gif"];
 
 function delay(milliseconds){
     return new Promise(resolve => {
@@ -41,16 +41,18 @@ async function slideshow(i){
     document.getElementById("movies").style.backgroundSize = "cover";
 
     if(i==0)
-    document.getElementById("movie-img").style.borderColor=  "darkgoldenrod";
-
+    document.getElementById("movie-img").style.borderColor=  "orangered";
+    
     if(i==1)
-    document.getElementById("movie-img").style.borderColor=  "greenyellow";
+    document.getElementById("movie-img").style.borderColor=  "darkgoldenrod";
+    
 
     if(i==2)
-    document.getElementById("movie-img").style.borderColor=  "cyan";
+    document.getElementById("movie-img").style.borderColor=  "greenyellow";
+   
 
     if(i==3)
-    document.getElementById("movie-img").style.borderColor=  "orangered";
+    document.getElementById("movie-img").style.borderColor=  "cyan";
 
     if(i==4)
     document.getElementById("movie-img").style.borderColor=  "rgb(218, 217, 217)";
@@ -174,5 +176,5 @@ function formresult(){
     else
     window.alert("Enter all values");
 
-    
+
 }
