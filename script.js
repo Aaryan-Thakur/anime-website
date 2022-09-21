@@ -77,14 +77,14 @@ function previous(){
 
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
-  if (window.pageYOffset > 1  ) {
+  if (window.pageYOffset > 5  ) {
     document.getElementById("logo").style.marginBottom = "0px";
     document.getElementById("logo").style.maxWidth = "40px";
     document.getElementById("page-title").style.display = "none";
     document.getElementById("main-title").style.paddingLeft="0px";
 
     document.getElementById("link-container").style.display="none";
-    document.getElementById("link-container-min").style.display="";
+    document.getElementById("link-container-min").style.display="flex";
     // document.getElementById("link-container-min").style.display ="inline-block";
 
     for(let i=0;i<4;i++){
@@ -102,7 +102,7 @@ function scrollFunction() {
 
 
     for(let i=0;i<4;i++){
-        document.getElementsByClassName("nav-link")[i].style.padding = "20px";
+        document.getElementsByClassName("nav-link")[i].style.padding = "10px";
         document.getElementsByClassName("nav-link")[i].style.color = "white  ";
 
     }
@@ -116,4 +116,63 @@ function scrollFunction() {
 
 
   }
+
+ 
+}
+
+class fform{
+    constructor(
+        name,
+        age,
+        gender,
+        movie1,
+        movie2,
+        movie3,
+        movie4,
+        movie5,
+        ){
+        this.name = name;
+        this.age = age;
+        this.gender=gender;
+        this.movie1=movie1;
+        this.movie2=movie2;
+        this.movie3=movie3;
+        this.movie4=movie4;
+        this.movie5=movie5;
+    }
+  }
+
+
+function formresult(){
+
+    let form = new fform();
+
+    let n =  document.getElementById("nameinput").value;
+    let a =  document.getElementById("ageinput").value;
+
+    if( a<=12 || a>=95 ){
+        window.alert("Enter a valid age");
+        return;
+    }
+
+    let g;
+    for(i=0;i<3;i++)
+        if(document.getElementsByClassName("radio-input")[i].checked)
+            g = document.getElementsByClassName("radio-input")[i].value;
+  
+    let m1 = document.getElementById("movie1").value;
+    let m2 = document.getElementById("movie2").value;
+    let m3 = document.getElementById("movie3").value;
+    let m4 = document.getElementById("movie4").value;
+    let m5 = document.getElementById("movie5").value;
+
+    if(n!="",a!="",g!="",m1!="",m2!="",m3!="",m4!="",m5!="")
+    {
+        form = new fform(n,a,g,m1,m2,m3,m4,m5);
+        console.log(form);
+    }
+    else
+    window.alert("Enter all values");
+
+    
 }

@@ -9,6 +9,8 @@ html{
     scroll-behavior: smooth;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;
+    /* overflow: scroll; */
+    background-color: #333333;
 
 }
 
@@ -73,6 +75,7 @@ backdrop-filter: blur(15.9px);
   display: flex;
   padding-left: 30px;
   transition: 0.3s;
+  align-items: center;
 
 }
 
@@ -84,6 +87,7 @@ backdrop-filter: blur(15.9px);
   justify-content: flex-end;
 
   align-items: center;
+  display: none;
   
 }
 #link-container-min>.nav-link{
@@ -238,6 +242,7 @@ color: whitesmoke;
     
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("static/m1.gif") no-repeat center;
   background-size: cover;
+  min-height: 100vh;
 
 }
 
@@ -362,22 +367,6 @@ video{
     justify-content: center;
 }
 
-
-form{
-    text-align: center;
-    background-color: black;
-    color: aliceblue;
-    width: fit-content;
-    border-radius: 10px;
-    margin-bottom: 30px;
-
-
-}
-.form{
-    display: flex;
-    justify-content: center;
-    
-}
 .label{
     margin: 50px;
 }
@@ -427,4 +416,45 @@ form{
 
 .wrap{
   margin-top: 40px;
+}
+
+#feedback-form{
+  background-color: #dddddd;
+}
+
+.form-group{
+  display: flex;
+  justify-content: center;
+  margin-right: 160px;
+}
+
+.input{
+  width: 50vw;
+  padding: 20px 0px;
+}
+
+label{
+  padding-right: 20px;
+  align-self: center;
+  text-align: right;
+  width: 200px;
+}
+
+label.radio{
+  text-align: left;
+  padding-left: 20px;
+  
+}
+
+input[type=radio]{
+  padding-right: 20px;
+}
+
+#button-container{
+  display: flex;
+  justify-content: center;
+}
+
+#submit{
+  margin-left: 50vw;
 }

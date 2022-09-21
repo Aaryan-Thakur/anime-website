@@ -2,27 +2,14 @@
 <html>
   <head>
     <title>Waltuh</title>
-    <link rel="stylesheet" href="style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="prec onnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-    <script>
-      function allowDrop(ev) {
-        ev.preventDefault();
-      }
-
-      function drag(ev) {
-        ev.dataTransfer.setData("text", ev.target.id);
-      }
-
-      function drop(ev) {
-        ev.preventDefault();
-        var data = ev.dataTransfer.getData("text");
-        ev.target.appendChild(document.getElementById(data));
-      }
-    </script>
-
-  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
 
   <body>
 
@@ -163,123 +150,68 @@
       </p>
       <div class="trailer" > <a href="https://www.youtube.com/watch?v=MmoBvmJA9XI"><button class="button-2" role="button">Trailer</button></a></div>
     </div>
-<!-- THIS IS NOT DISPLAYED -->
-
-
-    <!-- <ul>d
-
-      <li>
-        <div class="movieitem">
-
-
-          <img class="movie-img" src="static/m1.webp">
-          Spirited Away
-
-
-          <a id="trailer" href="https://www.youtube.com/watch?v=ByXuk9QqQkk">Trailer</a>
-        </div>
-      </li>
-
-      
-      <li>
-        
-      </li>
-      
-      <li>
-        
-      </li>
-      
-      <li>
-        
-      </li>
-
-      <li>
-        
-      </li>
-    </ul> -->
   </div>
    </section>
 
+  <section class="" id="feedback-form">
+    <div style="text-align:center">Feedback Form</div>
+    <form>
 
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Name: </label>
+        <div class="input">
+        <input type="text" class="form-control" id="nameinput" placeholder="Kid Named Finger ">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label  for="exampleFormControlInput1">Age: </label>
+        <div class="input">
+        <input min="18" max="95" type="number" class="form-control" id="ageinput" placeholder="18">
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Gender: </label>
+        <div class="input" id="radio">
+        <div class="radio-container">       
+          <input class="radio-input" name ="Gender" type="radio" id="Male" value="Male"><label for="" class="radio">Male</label>
+        </div>
+        <div class="radio-container">        
+          <input class="radio-input" name ="Gender" type="radio" id="Female" value="Female"><label for="" class="radio">Female</label>
+        </div>
+        <div class="radio-container">        
+          <input class="radio-input" name ="Gender" type="radio" id="Others" value="Others"><label for="" class="radio">Others</label>
+        </div>
+       </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Your top 5 movies  : </label>
+
+
+
+      <div class="input">
+        <input type="text" class="form-control" id="movie1" placeholder="Insert Dogshit Movie">
+        <input type="text" class="form-control" id="movie2" placeholder="Insert Dogshit Movie">
+        <input type="text" class="form-control" id="movie3" placeholder="Insert Dogshit Movie">
+        <input type="text" class="form-control" id="movie4" placeholder="Insert Dogshit Movie">
+        <input type="text" class="form-control" id="movie5" placeholder="Insert Dogshit Movie">
+      </div>
+        
+      </div>
+      
+      <div id="button-container">
+      <button onclick="formresult()" type="button" id="submit "class="btn btn-light">Submit</button>
+      </div>
+
+      
+    </form>
+  </section>
 
    
-    <!-- <article id="container">
-      <div id="best-movie">
-      <h2 style="margin:0px">Best anime movie of 2022</h2>
-      <h3>One Piece Flim Red</h3>
-      <p>
-        One Piece Film: Red is a 2022 Japanese animated fantasy action-adventure film directed by Gorō Taniguchi and produced by Toei Animation.It is the fifteenth feature film of the One Piece film series, based on the manga of the same name written and illustrated by Eiichiro Oda.
-      </p>
-
-     
-      <video width="880" controls>
-      <source src="static/trailer.mp4" />
-      Your browser does not support HTML video.
-      </video>
-    </div>
-    </article>
-
-
-    <div class="form">
-      
-      <form>
-        <div class="title"> Feedback Form</div>
-          <label class="lable" for="fname">Name</label>
-          <input type="text" id = "fname"> <br> <br>
-
-          <label class="lable" for="mail">Email ID</label>
-          <input type="email" id = "mail"><br><br>
-
-          
-          <label class="lable" for="age">Age</label>
-          <input type="number" id = "age"><br><br>
-
-
-          <label class="lable" for="html">Gender</label>
-
-        <div class="inputgender">
-          <input type="radio" id="male" name="fav_language" value="male">
-          <label for="html">male</label><br>
-          <input type="radio" id="female" name="fav_language" value="female">
-          <label for="female">female</label><br>
-        <div>
-
-          <label for="cars">Rate one piece film red my dragging and dropping </label>
-          <section class="dnd">
-               <div class="rating">
-            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-              <img
-                src="static/m6.jpg"
-                draggable="true"
-                ondragstart="drag(event)"
-                id="drag1"
-                width="55"
-                height="31"
-              />
-            </div>
-            <div>A+</div>
-          </div>
-
-            <div>
-              <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-              <div>A</div>
-            </div>
-
-            <div>
-              <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-              <div>B</div>
-            </div>
-
-            <div>
-              <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-              <div>F</div>
-            </div>
-          </section><br>
-          <input type="submit" value="Submit">
-      </form>  -->
-
-
-
   </body>
   <script src="script.js"></script>
 </html>
